@@ -3,6 +3,7 @@ package com.jiannapohotmail.com.project1;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -34,11 +35,13 @@ public class PointInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
 
         View v = inflater.inflate(R.layout.point_info_window, null);
 
-        TextView title = (TextView) v.findViewById(R.id.location_info_window_txt);
-        TextView subtitle = (TextView) v.findViewById(R.id.descr_info_window_txt);
+        TextView location = v.findViewById(R.id.location_info_window_txt);
+        TextView descr = v.findViewById(R.id.descr_info_window_txt);
+        ImageView img = v.findViewById(R.id.info_window_img);
 
-        title.setText(marker.getTitle());
-        subtitle.setText(marker.getSnippet());
+        location.setText(marker.getTitle());
+        descr.setText(marker.getSnippet());
+        img.setBackgroundResource(R.drawable.dekemvriana);
 
         return v;
 
