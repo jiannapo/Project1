@@ -10,9 +10,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 import com.jiannapohotmail.com.project1.R;
 
-/**
- * Created by Stamatis on 10/1/2018.
- */
 
 public class PointInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
     Context context;
